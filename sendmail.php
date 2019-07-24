@@ -1,3 +1,5 @@
+<?php
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,8 +8,22 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-
+    <div class="conteiner" style="margin-top: 100px">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-md-offset-3" align="center">
+                <form method="post" action="sendmail.php">
+                    <input class="form-control" name="subject" placeholder="Subject...">
+                    <input class="form-control" name="email" type="email" placeholder="Email...">
+                    <textarea placeholder="Message..." name="message">
+                    </textarea>
+                    <input class="form-control" type="file" name="attachment">
+                    <input type="submit" value="Send Email">
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
